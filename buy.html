@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Где купить | Gabbiano</title>
+  <base href="/">
+  <meta name="description" content="Описание">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width" maximum-scale="1">
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+  <div class="main">
+    <header class="header">
+      <div class="header__logo"><a href="/"><img src="img/logo.png" alt="Логотип" class="header__pic"></a></div>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="brend.html" class="nav__link">О бренде</a></li>
+          <li class="nav__item"><a href="collection.html" class="nav__link">Коллекции</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="buy.html" class="nav__link">Где купить</a></li>
+          <li class="nav__item"><a href="press-center.html" class="nav__link">Пресс-центр</a></li>
+          <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="banner banner_content">
+      <div class="inner">
+        <div class="banner__box">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item"><a href="#" onclick="return false" class="breadcrumb__link">Где купить</a></li>
+            </ul>
+          </div>
+          <h1 class="h1">Где купить</h1>
+          <div class="banner__content">Согласно предыдущему, веданта очевидна не для всех. Вероятностная логика, следовательно, творит гедонизм. Освобождение, по определению, транспонирует непредвиденный дедуктивный метод. Принцип восприятия ментально представляет собой неоднозначный структурализм.</div>
+        </div>
+      </div>
+      <div class="social social_vertical social_absolute"><a href="#" onclick="return false" class="social__link"><img src="img/icons/inst.svg" alt="" class="social__inst"></a><a href="#" onclick="return false" class="social__link"><img src="img/icons/yt.svg" alt=""></a><a href="#" onclick="return false" class="social__link"><img src="img/icons/vk.svg" alt=""></a><a href="#" onclick="return false" class="social__link"><img src="img/icons/fb.svg" alt=""></a></div>
+    </div>
+    <div class="buy-page">
+      <div class="buy-page__head">
+        <form action="" class="buy-page__search form">
+          <div class="form__group">
+            <input type="text" placeholder="Где вы находитесь?" class="form__field form__field_min">
+            <button class="btn buy-page__btn">Найти</button>
+          </div>
+        </form>
+        <div class="buy-page__anchor">
+          <button class="btn buy-page__link">на карте</button>
+          <button class="btn btn_disabled buy-page__link">списком</button>
+        </div>
+        <div class="buy-page__category">
+          <div class="buy-page__item"><img src="img/icons/map_redhead.svg" alt=""><span>Эксклюзивный представитель</span></div>
+          <div class="buy-page__item"><img src="img/icons/map_black.svg" alt=""><span>Дистрибьюторы</span></div>
+        </div>
+      </div>
+      <div class="buy-page__map">
+        <div id="map-page"></div>
+        <script>
+          function initMaps() {
+          	var bgStyle = [{
+          		"featureType": "landscape",
+          		"elementType": "geometry.fill",
+          		"stylers": [{
+          			"color": "#f5f5f5"
+          		}]
+          	},
+          	{
+          		"featureType": "road",
+          		"elementType": "geometry.fill",
+          		"stylers": [{
+          			"color": "#efefef"
+          		}]
+          	},
+          	{
+          		"featureType": "road",
+          		"elementType": "geometry.stroke",
+          		"stylers": [{
+          			"color": "#ccc"
+          		}]
+          	},
+          	{
+          		"featureType": "water",
+          		"elementType": "geometry.fill",
+          		"stylers": [{
+          			"color": "#c8c7c8"
+          		}]
+          	}
+          	]
+          	var map = new google.maps.Map(document.getElementById('map-page'), {
+          	zoom: 7,
+          	center: {lat: 56.313498, lng: 43.998027},
+          	styles: bgStyle
+          	});
+          
+          	// Add some markers to the map.
+          	// Note: The code uses the JavaScript Array.prototype.map() method to
+          	// create an array of markers based on a given "locations" array.
+          	// The map() method here has nothing to do with the Google Maps API.
+          	var mark_img_1 = {
+          		url: "img/icons/map_redhead.svg",
+          		size: new google.maps.Size(18, 27),
+          		origin: new google.maps.Point(0, 0),
+          		anchor: new google.maps.Point(0, 0)
+          	}
+          	var markers = locations.map(function(location, i) {
+          	return new google.maps.Marker({
+          		position: location,
+          		icon: mark_img_1
+          	});
+          	});
+          	// Add a marker clusterer to manage the markers.
+          	var markerCluster = new MarkerClusterer(map, markers,
+          		{imagePath: 'img/icons/map/map'});
+          }
+          var locations = [
+          	{lat: 56.313498, lng: 43.998027},
+          	{lat: -33.718234, lng: 150.363181},
+          	{lat: -33.727111, lng: 150.371124},
+          	{lat: -33.848588, lng: 151.209834},
+          	{lat: -33.851702, lng: 151.216968},
+          	{lat: -34.671264, lng: 150.863657},
+          	{lat: -35.304724, lng: 148.662905},
+          	{lat: -36.817685, lng: 175.699196},
+          	{lat: -36.828611, lng: 175.790222},
+          	{lat: -37.750000, lng: 145.116667},
+          	{lat: -37.759859, lng: 145.128708},
+          	{lat: -37.765015, lng: 145.133858},
+          	{lat: -37.770104, lng: 145.143299},
+          	{lat: -37.773700, lng: 145.145187},
+          	{lat: -37.774785, lng: 145.137978},
+          	{lat: -37.819616, lng: 144.968119},
+          	{lat: -38.330766, lng: 144.695692},
+          	{lat: -39.927193, lng: 175.053218},
+          	{lat: -41.330162, lng: 174.865694},
+          	{lat: -42.734358, lng: 147.439506},
+          	{lat: -42.734358, lng: 147.501315},
+          	{lat: -42.735258, lng: 147.438000},
+          	{lat: -43.999792, lng: 170.463352}
+          ]
+        </script>
+      </div>
+      <div class="buy-page__container">
+        <div class="buy-page__table buy-table">
+          <div class="buy-table__row">
+            <div class="buy-table__head">Европейский союз</div>
+            <div class="buy-table__list">
+              <div class="buy-table__col">
+                <div class="buy-table__title">Италия</div>
+                <div class="buy-table__name">Parma<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Латвия</div>
+                <div class="buy-table__name">Рига<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Румыния</div>
+                <div class="buy-table__name">Бухарест<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Словакия</div>
+                <div class="buy-table__name">Trnava<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Чехия</div>
+                <div class="buy-table__name">Прага<span class="buy-table__count">(1)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="buy-table__row">
+            <div class="buy-table__head">Восточная европа</div>
+            <div class="buy-table__list">
+              <div class="buy-table__col">
+                <div class="buy-table__title">Белорусь</div>
+                <div class="buy-table__name">Брест<span class="buy-table__count"> (0)</span></div>
+                <div class="buy-table__name">Витебск<span class="buy-table__count"> (1)</span></div>
+                <div class="buy-table__name">Гомель<span class="buy-table__count">  (1)</span></div>
+                <div class="buy-table__name">Гродно<span class="buy-table__count">  (1)</span></div>
+                <div class="buy-table__name">Минск<span class="buy-table__count">  (1)</span></div>
+                <div class="buy-table__name">Могилев<span class="buy-table__count">  (1)</span></div>
+                <div class="buy-table__name">Минск<span class="buy-table__count">  (1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Молдова</div>
+                <div class="buy-table__name">Кишинев<span class="buy-table__count">  (1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Украина</div>
+                <div class="buy-table__name">Донецк<span class="buy-table__count">   (1)</span></div>
+                <div class="buy-table__name">Киев<span class="buy-table__count">   (1)</span></div>
+                <div class="buy-table__name">Одесса<span class="buy-table__count">   (1)</span></div>
+                <div class="buy-table__name">Черкассы<span class="buy-table__count">   (1)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="buy-table__row">
+            <div class="buy-table__head">страны СНГ</div>
+            <div class="buy-table__list">
+              <div class="buy-table__col">
+                <div class="buy-table__title">Азербайджан</div>
+                <div class="buy-table__name">Баку<span class="buy-table__count">  (1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Армения</div>
+                <div class="buy-table__name">Gyumri<span class="buy-table__count">  (1)</span></div>
+                <div class="buy-table__name">Yerevan<span class="buy-table__count">  (1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Казахстан</div>
+                <div class="buy-table__name">Алма-ата<span class="buy-table__count">  (2)</span></div>
+                <div class="buy-table__name">Шымкент<span class="buy-table__count">  (1)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="buy-table__row">
+            <div class="buy-table__head">Россия</div>
+            <div class="buy-table__list">
+              <div class="buy-table__col">
+                <div class="buy-table__title">	А</div>
+                <div class="buy-table__name">Абакан<span class="buy-table__count">  (1)</span></div>
+                <div class="buy-table__name">Арзамас<span class="buy-table__count buy-table__count_redhead"> (1)</span></div>
+                <div class="buy-table__name">Архангек<span class="buy-table__count buy-table__count_redhead"> (1)</span></div>
+                <div class="buy-table__name">Астраха<span class="buy-table__count buy-table__count_redhead"> (1)</span></div>
+                <div class="buy-table__name">Ачинск<span class="buy-table__count"> (1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">	Б</div>
+                <div class="buy-table__name">Балаково<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Барнаул<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Белгород<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Белореченск<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Бийск<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Благовещенск<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Бор<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Братск<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Брянск<span class="buy-table__count">(2)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">В</div>
+                <div class="buy-table__name">Балаково<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Великий Новгород<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Владивосток<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Волгоград<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Волгодонск<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Волжск<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Волжский<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Вологда<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Воронеж<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Выборг<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Г</div>
+                <div class="buy-table__name">Гусев<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Д</div>
+                <div class="buy-table__name">Дзержинск<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Долгопрудный<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Е</div>
+                <div class="buy-table__name">Екатеринбург<span class="buy-table__count">(2)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">З</div>
+                <div class="buy-table__name">Зеленоград<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">И</div>
+                <div class="buy-table__name">Зеленоград<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Иваново <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Ижевск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Иркутск <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Ишим <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Йошкар-Ола <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">К</div>
+                <div class="buy-table__name">Казань<span class="buy-table__count buy-table__count_redhead">(0)</span></div>
+                <div class="buy-table__name">Калининград<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Калуга<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Камчатка<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Кемерово<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Кинешма<span class="buy-table__count">(2)</span></div>
+                <div class="buy-table__name">Киров<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Коломна<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Комсомольск-на-Амуре<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Кострома<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Котлас<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Краснодар<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Красноярск<span class="buy-table__count">(2)</span></div>
+                <div class="buy-table__name">Кропоткин<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Курган<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Курск<span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Л</div>
+                <div class="buy-table__name">Люберцы <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">М</div>
+                <div class="buy-table__name">Магадан <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Магнитогорск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Майкоп <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Махачкала <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Москва <span class="buy-table__count buy-table__count_redhead">(10)</span></div>
+                <div class="buy-table__name">Мурманск <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Муром <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Н</div>
+                <div class="buy-table__name">Нижневартовск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Нижнекамск <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Нижний Новгород <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Нижний Тагил <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Новокузнецк <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Новомосковск <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Новороссийск <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Новосибирск <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+                <div class="buy-table__name">Новочеркасск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Новый Уренгой <span class="buy-table__count buy-table__count_redhead">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">О</div>
+                <div class="buy-table__name">Одинцово <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Омск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Орел <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Оренбург <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Орехово-Зуево <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Орск <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">П</div>
+                <div class="buy-table__name">Павлово <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Пенза <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Пермь <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Петрозаводск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Пятигорск <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Р</div>
+                <div class="buy-table__name">Раменское <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Ростов-на-Дону <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Рыбинск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Рязань <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">С</div>
+                <div class="buy-table__name">Самара  <span class="buy-table__count">(0)</span></div>
+                <div class="buy-table__name">Санкт-Петербург <span class="buy-table__count">(3)</span></div>
+                <div class="buy-table__name">Саранск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Саратов <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Севастополь <span class="buy-table__count">(2)</span></div>
+                <div class="buy-table__name">Сергиев Посад <span class="buy-table__count">(0)</span></div>
+                <div class="buy-table__name">Симферополь <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Смоленск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Сочи <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Ставрополь <span class="buy-table__count">(2)</span></div>
+                <div class="buy-table__name">Сургут <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Сызрань <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Сыктывкар <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Т</div>
+                <div class="buy-table__name">Тамбов <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Тверь <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Тольятти <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Томск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Тула <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Тюмень <span class="buy-table__count">(2)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">У</div>
+                <div class="buy-table__name">Улан-Удэ<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Ульяновск<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Уфа<span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Ухта<span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Х</div>
+                <div class="buy-table__name">Хабаровск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Ханты-Мансийск <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Ч</div>
+                <div class="buy-table__name">Чебоксары <span class="buy-table__count">(2)</span></div>
+                <div class="buy-table__name">Челябинск <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Череповец <span class="buy-table__count">(1)</span></div>
+                <div class="buy-table__name">Чита <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Ш</div>
+                <div class="buy-table__name">Шахты <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Э</div>
+                <div class="buy-table__name">Электросталь <span class="buy-table__count">(1)</span></div>
+              </div>
+              <div class="buy-table__col">
+                <div class="buy-table__title">Э</div>
+                <div class="buy-table__name">Южно-Сахалинск <span class="buy-table__count">(1)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buy-page__info buy-info">
+          <div class="buy-info__head">Санкт-Петербург</div>
+          <div class="buy-info__row">
+            <div class="buy-info__subtitle">Эксклюзивный представитель</div>
+            <div class="buy-info__title">Свадебный салон “Gabbiano”</div>
+            <div class="buy-info__adress">ул. Кронверкская, д. №12 <a href="#" onclick="return false">(Показать на карте)</a></div><a href="tel:+7 (911) 761-05-35" class="buy-info__phone">+7 (911) 761-05-35</a>
+            <button class="buy-info__btn">Подробнее</button>
+          </div>
+          <div class="buy-info__row">
+            <div class="buy-info__title">Свадебный салон “Дворянка”</div>
+            <div class="buy-info__adress">ул. Исполкомская , д. № 3 <a href="#" onclick="return false">(Показать на карте)</a></div><a href="tel:+7 (911) 761-05-35" class="buy-info__phone">+7 921 093 07 77</a>
+            <button class="buy-info__btn">Подробнее</button>
+          </div>
+          <div class="buy-info__row">
+            <div class="buy-info__title">Свадебный салон “Будуар”</div>
+            <div class="buy-info__adress">пер. Литейный, д.26, БЦ "Преображенский двор", 2 этаж <a href="#" onclick="return false">(Показать на карте)</a></div><a href="tel:+7 (911) 761-05-35" class="buy-info__phone">+7 921 093 07 77</a>
+            <button class="buy-info__btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subscribe">
+      <div class="inner">
+        <div class="subscribe__wrap">
+          <div class="subscribe__block subscribe__block_inherit">
+            <div class="subscribe__title">Оставайся всегда в курсе новостей и акций компании</div>
+            <form action="" class="form subscribe__form">
+              <div class="form__group">
+                <input type="text" placeholder="Введите свой e-mail" class="form__field subscribe__input">
+                <button class="btn form__btn">подписаться</button>
+              </div>
+            </form>
+            <div class="subscribe__social">
+              <div class="subscribe__text">Мы в соц.сетях:</div>
+              <div class="social social_gorizontal"><a href="#" onclick="return false" class="social__link"><img src="img/icons/inst.svg" alt="" class="social__inst"></a><a href="#" onclick="return false" class="social__link"><img src="img/icons/yt.svg" alt=""></a><a href="#" onclick="return false" class="social__link"><img src="img/icons/vk.svg" alt=""></a><a href="#" onclick="return false" class="social__link"><img src="img/icons/fb.svg" alt=""></a></div>
+            </div>
+          </div>
+          <div class="subscribe__pic"><img src="img/subscribe2.jpg" alt="subscribe" class="subscribe__img"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__wrap">
+        <div class="footer__block"><a href="/" class="footer__logo"><img src="img/logo.png" alt="Логотип"></a><a href="#" onclick="return false" class="footer__collection">gabbiano collection</a><a href="#" onclick="return false" class="footer__collection">strekkoza</a><a href="#" onclick="return false" class="footer__collection">Queen</a><a href="#" onclick="return false" class="footer__collection">jozi</a></div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__col">
+          <button data-modal="login" class="btn footer__btn js-open-modal">Вход для дилеров</button>
+          <p class="footer__text">Все права защищены. Использование материалов только с письменного разрешения владельца.</p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__title">меню</p><a href="#" onclick="return false" class="footer__link">Все коллекции</a><a href="#" onclick="return false" class="footer__link">Подбор по силуэту</a><a href="#" onclick="return false" class="footer__link">Пресс-центр</a><a href="#" onclick="return false" class="footer__link">Где купить</a><a href="#" onclick="return false" class="footer__link">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__title">О бренде</p><a href="#" onclick="return false" class="footer__link">Об ателье</a><a href="#" onclick="return false" class="footer__link">История бренда</a><a href="#" onclick="return false" class="footer__link">Ценности бренда</a><a href="#" onclick="return false" class="footer__link">Партнерство с кутюрье</a><a href="#" onclick="return false" class="footer__link">Команда</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__title">Дилерам</p><a href="#" onclick="return false" class="footer__link">Документы и сертификаты</a><a href="#" onclick="return false" class="footer__link">Коммерческие условия</a><a href="#" onclick="return false" class="footer__link">Доставка и хранение</a><a href="#" onclick="return false" class="footer__link">Стать дилером</a>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="copyright__box">
+        <p class="copyright__text">® 2007-2018 «Gabbiano»</p><a href="#" onclick="return false" class="copyright__link">Разработка сайта —<img src="img/ammc.png" alt="" class="copyright__img"></a>
+      </div>
+    </div>
+    <div class="modals">
+      <div class="modals__inner">
+        <div class="modals__block">
+          <div class="modals__close"><img src="img/icons/close.svg" alt=""></div>
+          <form action="" method="post" id="login" class="modals__form modal modal_cols">
+            <div class="modal__form">
+              <div class="title title_after-left-min modal__title">Вход для дилеров</div>
+              <div class="modal__text">Для входа в личный кабинет, укажите логин и пароль выданные вам менеджером</div>
+              <div class="modal__group"><span class="modal__name">Логин</span>
+                <input type="email" required class="modal__field">
+              </div>
+              <div class="modal__group"><span class="modal__name">Пароль</span>
+                <input type="password" required class="modal__field">
+              </div>
+              <button class="btn modal__btn">Войти</button>
+              <div class="modal__cols">
+                <div class="modal__sign">Хотите стать дилером? Оставьте свои даные и мы с вами свяжемся</div><a href="#" onclick="return false" class="btn-white modal__link">стать дилером</a>
+              </div>
+            </div>
+            <div class="modal__img"><img src="img/img_form.jpg" alt=""></div>
+          </form>
+          <form action="" method="post" id="callback" class="modals__form modal modal_cols">
+            <div class="modal__form">
+              <div class="title title_after-left-min modal__title">Заказать звонок</div>
+              <div class="modal__text">Оставьте ваши данные и мы свяжемся с вами в ближайшее время</div>
+              <div class="modal__group"><span class="modal__name">Ваше имя*</span>
+                <input type="text" required class="modal__field">
+              </div>
+              <div class="modal__group"><span class="modal__name">Телефон*</span>
+                <input type="tel" required class="modal__field">
+              </div>
+              <div class="modal__group"><span class="modal__name">E-mail</span>
+                <input type="email" class="modal__field">
+              </div>
+              <div class="modal__group">
+                <textarea name="comment" placeholder="Комментарий" class="modal__field modal__field_textarea"></textarea>
+              </div>
+              <button class="btn modal__btn">Отправить</button><span class="modal__required">* - обязательные поля</span>
+            </div>
+            <div class="modal__img"><img src="img/img_form.jpg" alt=""></div>
+          </form>
+          <div id="thanks" class="thanks"><img src="img/icons/logo_thanks.svg" alt="">
+            <p class="thanks__text">Спасибо, что подписались на нашу рассылку</p>
+            <button class="btn-white thanks__btn">ок</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="application/javascript" src="/libs/jQuery/jquery-3.3.1.js"></script>
+<script type="application/javascript" src="/libs/jQuery-migrate/ jquery-migrate-3.0.0.js"></script>
+<script type="application/javascript" src="/libs/fancybox/jquery.fancybox.3.3.5.js"></script>
+<script type="application/javascript" src="/libs/slick/slick.min.js"></script>
+<script type="application/javascript" src="/libs/scrollSpeed/jQuery.scrollSpeed.js"></script>
+<script type="application/javascript" src="/libs/slicknav/jquery.slicknav.min.js"></script>
+<script type="application/javascript" src="/libs/formstyler/jquery.formstyler.min.js"></script>
+<script type="application/javascript" src="/libs/jquery-ui/jquery-ui.min.js"></script>
+<script type="application/javascript" src="/libs/inputmask/jquery.masked.input.js"></script>
+<script type="application/javascript" src="/libs/nav/jquery.changeActiveNav.min.js"></script>
+<script type="application/javascript" src="/libs/resize/autoresize.jquery.js"></script>
+<script type="application/javascript" src="/libs/animateNumber/jquery.animateNumber.js"></script>
+<script type="application/javascript" src="/libs/hammer/hammer.js"></script>
+<script type="application/javascript" src="/libs/masonry/masonry.min.js"></script>
+<script type="application/javascript" src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6ajcdqOJx6iu9wIANO5nd6175nvM-cmU&amp;language=ru&amp;libraries=places&amp;callback=initMap"></script>
+<script type="application/javascript" src="/js/common.js"></script>
