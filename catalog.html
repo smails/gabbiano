@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>Каталог | Gabbiano</title>
+  <title>Каталог| Gabbiano</title>
   <base href="/">
   <meta name="description" content="Описание">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,14 +19,17 @@
       <div class="header__logo"><a href="/"><img src="img/logo.png" alt="Логотип" class="header__pic"></a></div>
       <nav class="header__nav nav">
         <button class="m-menu"></button>
-        <ul class="nav__list">
-          <li class="nav__item"><a href="brend.html" class="nav__link">О бренде</a></li>
-          <li class="nav__item"><a href="collection.html" class="nav__link">Коллекции</a></li>
-          <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог</a></li>
-          <li class="nav__item"><a href="buy.html" class="nav__link">Где купить</a></li>
-          <li class="nav__item"><a href="press-center.html" class="nav__link">Пресс-центр</a></li>
-          <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-        </ul>
+        <div class="nav__wrap">
+          <div class="nav__header"><span>Меню</span><span class="nav__close"><img src="img/icons/closse_black.svg" alt=""></span></div>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="brend.html" class="nav__link">О бренде</a></li>
+            <li class="nav__item"><a href="collection.html" class="nav__link">Коллекции</a></li>
+            <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог</a></li>
+            <li class="nav__item"><a href="buy.html" class="nav__link">Где купить</a></li>
+            <li class="nav__item"><a href="press-center.html" class="nav__link">Пресс-центр</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <div class="banner banner_content">
@@ -50,8 +53,10 @@
     </div>
     <section class="content">
       <div class="inner">
+        <button class="btn btn-filter">Фильтр</button>
         <div class="content__inner content__inner_catalog">
           <div class="sidebar">
+            <div class="sidebar__header"><span>Фильтры</span><span class="sidebar__close"><img src="img/icons/closse_black.svg" alt=""></span></div>
             <div class="sidebar__sort sort">
               <div class="sidebar__item">
                 <div class="sidebar__head">коллекции</div>
@@ -331,5 +336,5 @@
 <script type="application/javascript" src="/libs/hammer/hammer.js"></script>
 <script type="application/javascript" src="/libs/masonry/masonry.min.js"></script>
 <script type="application/javascript" src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6ajcdqOJx6iu9wIANO5nd6175nvM-cmU&amp;language=ru&amp;libraries=places&amp;callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTSkwA3v2zcj9kU0txhaoLpOo2W377r1s&amp;language=ru&amp;libraries=places&amp;callback=initMap"></script>
 <script type="application/javascript" src="/js/common.js"></script>
