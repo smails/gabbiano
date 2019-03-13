@@ -10219,15 +10219,7 @@ h2
     .sidebar__sort,
     .sidebar__wrap
     {
-        padding-right: 20%;
-    }
-}
-@media screen and (max-width: 1490px)
-{
-    .sidebar__sort,
-    .sidebar__wrap
-    {
-        padding-right: 15%;
+        padding-right: 4%;
     }
 }
 @media screen and (max-width: 1020px)
