@@ -2064,6 +2064,18 @@ body.compensate-for-scrollbar
     color: #c7c1b7;
 }
 
+@keyframes up
+{
+    0%
+    {
+        transform: translateY(-3px);
+    }
+    100%
+    {
+        transform: translateY(3px);
+    }
+}
+
 body
 {
     font-family: 'Raleway', sans-serif;
@@ -2348,6 +2360,47 @@ h2
     height: 12px;
 
     background-color: #e3e0db;
+}
+
+.up
+{
+    position: fixed;
+    right: 20px;
+    bottom: 60px; 
+
+    display: none;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #000;
+}
+.up:after
+{
+    position: absolute;
+    top: 40%; 
+    right: 0;
+    left: 0;
+
+    margin: 0 auto;
+
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAAkElEQVQ4T53SaxHDIBAE4F1HlYAEJERC6yQSIiEOioQ62s5lSObyKEfKT9j5uIElOpakh8VIfqI4o0DF3uYBSBHaBB32qhePEfoT9BjJyUBJA4AmegleYevTROgJbGE96A7swSJ0A+9gLXQBKzYDGEiWqEr+XFKuH5WtUnTYsnEHc5Na8W2gbOATQPkXO6DpC+irXKYuL2o6AAAAAElFTkSuQmCC');
+}
+.up:hover
+{
+    background-color: #2d2d2d; 
+    box-shadow: 1px 4px 16px rgba(0, 0, 0, .41);
+}
+.up:hover:after
+{
+    animation: up .5s infinite alternate;
+}
+@media screen and (max-width: 830px)
+{
+    .up
+    {
+        display: none !important;
+    }
 }
 
 .social_vertical
@@ -9555,7 +9608,8 @@ h2
     display: inline-block;
 
     width: 217px;
-    margin-left: 10px; 
+    height: 100%; 
+    margin-left: 10px;
 
     vertical-align: top;
 }
@@ -9586,6 +9640,8 @@ h2
 }
 .cart-slider__slide
 {
+    display: block !important; 
+
     margin-bottom: 10px;
 }
 .cart-slider__slide:focus
