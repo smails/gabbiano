@@ -394,6 +394,51 @@ table
     src: local('Raleway Black Italic'), local('Raleway-BlackItalic'), url('../fonts/raleway/ralewayblackitalic.woff2') format('woff2'), url('../fonts/raleway/ralewayblackitalic.woff') format('woff'), url('../fonts/raleway/ralewayblackitalic.ttf') format('truetype');
 }
 
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-style: normal;
+
+    src: local('Montserrat Hairline'), local('Montserrat-Hairline'), url('../fonts/montserrat/montserrathairline.woff2') format('woff2'), url('../fonts/montserrat/montserrathairline.woff') format('woff'), url('../fonts/montserrat/montserrathairline.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: normal;
+
+    src: local('Montserrat Light'), local('Montserrat-Light'), url('../fonts/montserrat/montserratlight.woff2') format('woff2'), url('../fonts/montserrat/montserratlight.woff') format('woff'), url('../fonts/montserrat/montserratlight.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat/montserrat.woff2') format('woff2'), url('../fonts/montserrat/montserrat.woff') format('woff'), url('../fonts/montserrat/montserrat.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/montserrat/montserratbold.woff2') format('woff2'), url('../fonts/montserrat/montserratbold.woff') format('woff'), url('../fonts/montserrat/montserratbold.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-style: normal;
+
+    src: local('Montserrat Black'), local('Montserrat-Black'), url('../fonts/montserrat/montserratblack.woff2') format('woff2'), url('../fonts/montserrat/montserratblack.woff') format('woff'), url('../fonts/montserrat/montserratblack.ttf') format('truetype');
+}
+
 body.compensate-for-scrollbar
 {
     overflow: hidden;
@@ -1017,15 +1062,17 @@ body.compensate-for-scrollbar
 
 .fancybox-caption
 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 2.5;
 
     right: 0; 
     bottom: 0;
     left: 0;
 
-    padding: 25px 44px;
+    padding: 20px 44px 30px;
+
+    text-align: center;
 
     color: #fff;
 }
@@ -2319,6 +2366,19 @@ h2
     margin: 15px auto;
 }
 
+.btn-collection
+{
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    bottom: -25px; 
+    left: 0;
+
+    margin: 0 auto;
+
+    transition: .5s ease;
+}
+
 .arrow-btn
 {
     width: 41px;
@@ -2409,6 +2469,13 @@ h2
 
     flex-flow: column;
     align-items: center;
+}
+@media screen and (max-width: 830px)
+{
+    .social_vertical
+    {
+        display: none;
+    }
 }
 
 .social_absolute
@@ -2551,6 +2618,8 @@ h2
 }
 .header__pic
 {
+    width: 250px; 
+
     vertical-align: middle;
 }
 @media screen and (max-width: 830px)
@@ -4274,14 +4343,14 @@ h2
         max-width: 1100px;
     }
 }
-@media screen and (max-width: 1390px)
+@media screen and (max-width: 1460px)
 {
     .model__title
     {
         max-width: 950px;
     }
 }
-@media screen and (max-width: 1230px)
+@media screen and (max-width: 1300px)
 {
     .model__title
     {
@@ -7857,6 +7926,10 @@ h2
     }
 }
 
+.footer__logo
+{
+    width: 250px;
+}
 @media screen and (max-width: 1150px)
 {
     .footer__logo
@@ -7864,7 +7937,6 @@ h2
         margin-right: 100px;
     }
 }
-
 @media screen and (max-width: 1024px)
 {
     .footer__logo
@@ -7872,7 +7944,6 @@ h2
         margin-right: 70px;
     }
 }
-
 @media screen and (max-width: 480px)
 {
     .footer__logo
@@ -9323,8 +9394,10 @@ h2
     z-index: 4; 
 
     display: flex;
-
-    justify-content: space-around;
+}
+.cart__picture img
+{
+    margin-right: 18px;
 }
 @media screen and (max-width: 1740px)
 {
@@ -9386,25 +9459,10 @@ h2
     position: relative;
 
     margin-top: 72px;
-    margin-bottom: 137px; 
+    margin-bottom: 0; 
     padding-bottom: 48px;
 
     text-align: center;
-}
-.cart__video:before
-{
-    position: absolute;
-    right: 0;
-    bottom: 0; 
-    left: 0;
-
-    width: 100%;
-    height: 360px;
-    margin: 0 auto;
-
-    content: '';
-
-    background-color: #faf8f5;
 }
 .cart__video img
 {
@@ -9419,6 +9477,19 @@ h2
     {
         width: 100%;
     }
+}
+.cart__video-bg
+{
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+
+    width: 100%;
+    height: 360px;
+    margin: 0 auto;
+
+    background-color: #faf8f5;
 }
 .cart__back
 {
