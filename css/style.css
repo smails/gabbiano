@@ -2502,6 +2502,7 @@ h2
     display: inline-flex;
 
     justify-content: space-between;
+    align-items: center;
 }
 .social_gorizontal .social__link:last-child
 {
@@ -4843,6 +4844,48 @@ h2
     width: 100%;
 
     vertical-align: middle;
+}
+
+#share
+{
+    text-align: center;
+}
+#share .b-share
+{
+    height: 24px;
+}
+#share .b-share-icon_vkontakte,
+#share .b-share-icon_facebook
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+
+    transition: .5s ease; 
+
+    background-position: center;
+    background-size: contain;
+
+    filter: sepia(100%) opacity(.7);
+}
+#share .b-share-icon_vkontakte:hover,
+#share .b-share-icon_facebook:hover
+{
+    filter: none;
+}
+#share .b-share .b-share__handle
+{
+    padding: 0 !important;
+}
+#share .b-share-icon_vkontakte
+{
+    background-image: url('../img/icons/vk.svg');
+}
+#share .b-share-icon_facebook
+{
+    background-image: url('../img/icons/fb.svg');
 }
 
 .dress
@@ -8592,6 +8635,24 @@ h2
     padding: 0;
 }
 
+.collection__caption
+{
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    position: absolute;
+    z-index: 99;
+    bottom: 30px; 
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .75);
+}
+
 .collection__subtitle
 {
     font-size: 12px;
@@ -10902,6 +10963,10 @@ h2
     {
         padding: 10px;
     }
+}
+.modal__field.error
+{
+    border: 1px solid red;
 }
 .modal__btn
 {
