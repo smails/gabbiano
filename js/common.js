@@ -11,4 +11,4 @@ up.click(function(){$('html, body').animate({scrollTop:0},1000)});function newsH
 newsHeight();slidePadding();videoCart();if($('.cart__video').length){videoCart();}
 if($('.cart__picture').length){propertyCollectionOnPage();}
 $(window).resize(function(){newsHeight();slidePadding();});$(window).scroll(function(){visibleUp();});if(window.innerWidth>1020){$('.sidebar__wrap').stick_in_parent();}
-new Ya.share({element:'share',elementStyle:{'type':'none','quickServices':['vkontakte','facebook']},link:'gb.amm-c.ru',title:'Gabbiano',});});
+if($('#share').length){Ya.share2('share',{theme:{services:'vkontakte,facebook',counter:false,},content:{url:location.href,title:"title",description:"tetx",image:location.hostname+'img/logo.svg'}});}});
