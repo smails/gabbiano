@@ -11157,6 +11157,18 @@ h2
 
     background: #fff;
 }
+.modal__answer .buy-info__row
+{
+    margin-top: 5px; 
+
+    border: 1px solid #fff;
+    border-bottom: 1px solid #e3e0db;
+}
+.modal__answer .buy-info__row:hover,
+.modal__answer .buy-info__row.active
+{
+    border: 1px solid #d4af37;
+}
 .modal__required
 {
     font-size: 12px;
