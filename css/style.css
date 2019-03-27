@@ -6533,7 +6533,7 @@ h2
     z-index: 2;
     left: 250px;
 
-    margin-bottom: 140px;
+    margin-bottom: 230px;
 }
 @media screen and (max-width: 1150px)
 {
@@ -7555,6 +7555,9 @@ h2
     left: 0;
 
     box-shadow: 1px 8px 32px rgba(0, 0, 0, .18);
+
+    ransform: scale(.85);
+    ransform-left: -40px;
 }
 @media screen and (max-width: 1490px)
 {
