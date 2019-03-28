@@ -2733,6 +2733,11 @@ h2
         color: #2d2d2d;
     }
 }
+.nav__link:hover,
+.nav__link.active
+{
+    color: #d4af37;
+}
 
 .nav__header
 {
@@ -9662,7 +9667,7 @@ h2
 
     text-align: center;
 }
-.cart__video img
+.cart__video iframe
 {
     position: relative;
     z-index: 9;
@@ -9671,7 +9676,7 @@ h2
 }
 @media screen and (max-width: 1440px)
 {
-    .cart__video img
+    .cart__video iframe
     {
         width: 100%;
     }
