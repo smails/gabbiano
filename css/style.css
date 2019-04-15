@@ -9460,11 +9460,15 @@ h2
 
     color: #000;
 }
+.cart__spec li:not(.btn-all)
+{
+    display: flex;
+}
 .cart__spec span
 {
     display: inline-block; 
 
-    width: 100px;
+    width: 130px;
 }
 .cart__spec b
 {
