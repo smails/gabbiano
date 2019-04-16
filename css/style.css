@@ -9180,7 +9180,9 @@ h2
     font-size: 14px;
     font-size: .875rem;
     font-weight: 300;
-    line-height: 24px; 
+    line-height: 24px;
+
+    margin-top: 15px; 
 
     color: #000;
 }
@@ -9270,6 +9272,16 @@ h2
 .article__tags
 {
     margin: 30px 0 20px;
+}
+
+.btn-event
+{
+    float: right;
+
+    max-width: 335px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    margin-left: 10px;
 }
 
 .cart
@@ -9939,13 +9951,25 @@ h2
 }
 .cart-slider__slide
 {
-    display: block !important; 
+    position: relative; 
+
+    display: block !important;
 
     margin-bottom: 10px;
 }
 .cart-slider__slide:focus
 {
     outline: none;
+}
+
+.zoom
+{
+    position: absolute;
+    z-index: 99;
+    top: 20px;
+    right: 20px;
+
+    background: none;
 }
 
 .magazine
