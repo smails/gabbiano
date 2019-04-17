@@ -7800,6 +7800,15 @@ h2
     align-items: center;
     align-content: flex-start;
 }
+@media screen and (max-width: 1430px)
+{
+    .buy-page__category
+    {
+        width: 25%; 
+
+        justify-content: flex-end;
+    }
+}
 @media screen and (max-width: 1260px)
 {
     .buy-page__category
@@ -7818,11 +7827,29 @@ h2
 
     color: #575757;
 }
+@media screen and (max-width: 1500px)
+{
+    .buy-page__category span
+    {
+        font-size: 11px;
+        font-size: .6875rem;
+    }
+}
 .buy-page__category img
 {
     margin: 0 15px; 
 
     vertical-align: text-top;
+}
+
+@media screen and (max-width: 1430px)
+{
+    .buy-page__item
+    {
+        line-height: 1; 
+
+        display: flex;
+    }
 }
 
 .buy-page__container
@@ -9960,6 +9987,10 @@ h2
 .cart-slider__slide:focus
 {
     outline: none;
+}
+.cart-slider__slide img
+{
+    width: 100%;
 }
 
 .zoom
