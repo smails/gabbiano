@@ -4647,7 +4647,7 @@ h2
 .model__info_catalog
 {
     position: absolute;
-    bottom: -100%;
+    bottom: -4.5%;
 
     display: block;
 
@@ -8553,7 +8553,8 @@ h2
 
     overflow: hidden;
 
-    margin: 0 5px; 
+    min-height: 645px; 
+    margin: 0 5px;
     margin-bottom: 26px;
 
     transition: .5s ease;
