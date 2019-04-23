@@ -2586,21 +2586,24 @@ h2
 
 .header
 {
-    box-sizing: border-box; 
+    z-index: 99;
+
+    box-sizing: border-box;
     width: 100%;
     padding: 20px 15px;
+
+    transition: padding .5s ease; 
+
+    background: #fff;
 }
 .header.fixed
 {
-    position: fixed;
-    z-index: 99;
     right: 0;
     left: 0;
 
     margin: 0 auto;
     padding: 9px 15px;
 
-    background: #fff;
     box-shadow: 1px 4px 16px rgba(0, 0, 0, .09);
 }
 .header__inner
