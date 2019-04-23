@@ -4662,6 +4662,51 @@ h2
 
     background-color: #faf8f5;
 }
+@media screen and (max-width: 1490px)
+{
+    .model__info_catalog
+    {
+        bottom: -5.5%;
+    }
+    .model__info_catalog .model__name,
+    .model__info_catalog .model__text,
+    .model__info_catalog .model__size,
+    .model__info_catalog .model__size span
+    {
+        font-size: 10px;
+        font-size: .625rem;
+    }
+}
+@media screen and (max-width: 1275px)
+{
+    .model__info_catalog
+    {
+        bottom: -6.5%;
+    }
+    .model__info_catalog .model__name
+    {
+        font-size: 9px;
+        font-size: .5625rem; 
+
+        padding-right: 5px;
+    }
+    .model__info_catalog .model__text,
+    .model__info_catalog .model__size,
+    .model__info_catalog .model__size span
+    {
+        font-size: 9px;
+        font-size: .5625rem; 
+
+        padding: 0 5px;
+    }
+}
+@media screen and (max-width: 1070px)
+{
+    .model__info_catalog
+    {
+        bottom: -5.5%;
+    }
+}
 .model__info_main
 {
     margin-top: 10px;
@@ -4705,7 +4750,8 @@ h2
         display: block;
 
         width: 220px;
-        padding-bottom: 5px; 
+        margin: 0 auto; 
+        padding-bottom: 5px;
 
         border: none;
 
@@ -8556,17 +8602,53 @@ h2
 
     overflow: hidden;
 
-    min-height: 645px; 
+    height: 645px; 
     margin: 0 5px;
     margin-bottom: 26px;
 
     transition: .5s ease;
 }
+@media screen and (max-width: 1645px)
+{
+    .content__block
+    {
+        height: 545px;
+    }
+}
+@media screen and (max-width: 1490px)
+{
+    .content__block
+    {
+        height: 435px;
+    }
+}
+@media screen and (max-width: 1275px)
+{
+    .content__block
+    {
+        height: 375px;
+    }
+}
+@media screen and (max-width: 1070px)
+{
+    .content__block
+    {
+        height: 355px;
+    }
+}
 @media screen and (max-width: 1020px)
 {
     .content__block
     {
+        height: 430px;
         margin: 0 5px 26px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .content__block
+    {
+        height: 450px;
     }
 }
 .content__block:hover
