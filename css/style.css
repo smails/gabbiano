@@ -9786,6 +9786,16 @@ h2
 {
     vertical-align: middle;
 }
+.cart__img_zoom
+{
+    height: 750px;
+}
+.cart__img_zoom .zoo-img
+{
+    height: 100%;
+
+    background-size: contain;
+}
 .cart__picture
 {
     position: relative;
